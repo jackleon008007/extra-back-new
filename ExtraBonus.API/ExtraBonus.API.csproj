@@ -17,14 +17,4 @@
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.3.1" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="BonusCenter\Controllers" />
-      <Folder Include="BonusCenter\Domain\Models" />
-      <Folder Include="BonusCenter\Domain\Repositories" />
-      <Folder Include="BonusCenter\Domain\Services\Comunication" />
-      <Folder Include="BonusCenter\Persistence\Repositories" />
-      <Folder Include="BonusCenter\Resources" />
-      <Folder Include="BonusCenter\Services" />
-    </ItemGroup>
-
 </Project>
