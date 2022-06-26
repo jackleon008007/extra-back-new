@@ -38,8 +38,8 @@ public class UsersController : ControllerBase
 
     }
     
-     [HttpGet("{email}")]
-        public async Task<UserResource> GetByEmailAndPasswordAsync(string email)
+     [HttpGet("={email}")]
+        public async Task<UserResource> GetByEmailAsync(string email)
         {
             var user = await _userService.FindByEmailAsync(email);
             var resource = _mapper.Map<User,UserResource>(user);
@@ -81,6 +81,16 @@ public class UsersController : ControllerBase
         var userResource = _mapper.Map<User, UserResource>(result.Resource);
 
         return Ok(userResource);
+    }
+    
+    [HttpGet("{id}")]
+    public async Task<UserResource> GetByIdAsync(int id)
+    {
+        var user = await _userService.FindByIdAsync(id);
+        var resource = _mapper.Map<User, UserResource>(user);
+        
+        return resource;
+
     }
 
     [HttpDelete("{id}")]
