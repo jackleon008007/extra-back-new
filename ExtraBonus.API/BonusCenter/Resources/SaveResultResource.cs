@@ -35,5 +35,11 @@ public class SaveResultResource
     [Required]
     public double Precio { get; set; }
     [Required]
+    public double TCEAemisor { get; set; }
+    [Required]
+    public double TCEAemisorEscudo { get; set; }
+    [Required]
+    public double TREAbonista { get; set; }
+    [Required]
     public int BondId { get; set; }
 }
