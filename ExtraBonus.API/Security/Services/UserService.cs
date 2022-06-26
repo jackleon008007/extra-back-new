@@ -45,9 +45,6 @@ public class UserService : IUserService
         var existingUser = await _userRepository.FindByEmailAsync(user.Email);
         
         
-
-        if (existingUser != null)
-            return new UserResponse("User already exist with this email.");
         try
         {
             // Add Tutorial
