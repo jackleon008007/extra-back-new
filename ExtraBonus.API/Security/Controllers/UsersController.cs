@@ -84,13 +84,16 @@ public class UsersController : ControllerBase
     }
     
     [HttpGet("{id}")]
-    public async Task<UserResource> GetByIdAsync(int id)
+    public async Task<IActionResult> GetByIdAsync(int id)
     {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState.GetErrorMessages());
         var user = await _userService.FindByIdAsync(id);
-        var resource = _mapper.Map<User, UserResource>(user);
+        if (!user.Success)
+            return BadRequest(user.Message);
+        var resource = _mapper.Map<User, UserResource>(user.Resource);
         
-        return resource;
-
+        return Ok(resource);
     }
 
     [HttpDelete("{id}")]

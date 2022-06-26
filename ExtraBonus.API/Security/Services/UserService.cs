@@ -23,9 +23,12 @@ public class UserService : IUserService
         return await  _userRepository.ListAsync();
     }
 
-    public async Task<User> FindByIdAsync(int id)
+    public async Task<UserResponse> FindByIdAsync(int id)
     {
-        return await _userRepository.FindByIdAsync(id);
+        var user = await _userRepository.FindByIdAsync(id);
+        if (user == null)
+            return new UserResponse("Invalid User not exist");
+        return new UserResponse(user);
     }
 
     public async Task<User> FindByEmailAsync(string email)
