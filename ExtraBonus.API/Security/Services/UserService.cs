@@ -32,7 +32,12 @@ public class UserService : IUserService
     {
         return await _userRepository.FindByEmailAsync(email);
     }
-    
+
+    public async Task<User> FindByEmailAndPasswordAsync(string email, string password)
+    {
+        return await _userRepository.FindByEmailAndPasswordAsync(email,password);
+    }
+
 
     public async Task<UserResponse> SaveAsync(User user)
     {
@@ -73,15 +78,9 @@ public class UserService : IUserService
         // Modify Fields
 
         existingUser.Name = user.Name;  // revisar que funcione bien- check fields after action update
-        existingUser.LastName = user.LastName;
-        existingUser.Age = user.Age;
         existingUser.Email = user.Email;
-        existingUser.Image = user.Image;
-        existingUser.Password = user.Password;
-        existingUser.WorkPlace = user.WorkPlace;
-        existingUser.Specialist = user.Specialist;
-        existingUser.Biography = user.Biography;
-        existingUser.Recommendation = user.Recommendation;
+        existingUser.Ruc = user.Ruc;
+
         try
         {
             _userRepository.Update(existingUser);

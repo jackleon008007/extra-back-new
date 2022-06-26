@@ -29,6 +29,16 @@ public class UsersController : ControllerBase
 
     }
     
+    [HttpGet("{email}And{password}")]
+    public async Task<UserResource> GetByEmailAndPasswordAsync(string email, string password)
+    {
+        var user = await _userService.FindByEmailAndPasswordAsync(email,password);
+        var resource = _mapper.Map<User,UserResource>(user);
+        return resource;
+
+    }
+    
+    
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SaveUserResource resource)
     {

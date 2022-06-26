@@ -3,13 +3,12 @@ using ExtraBonus.API.Shared.Domain.Services.Communication;
 
 namespace ExtraBonus.API.BonusCenter.Domain.Services.Comunication;
 
-public class BondResponse : BaseResponse<Bond>
+public class DueResponse : BaseResponse<Due>
 {
-    public BondResponse(string message) : base(message)
+    public DueResponse(string message) : base(message)
     {
     }
-
-    public BondResponse(Bond resource) : base(resource)
+    public DueResponse(Due resource) : base(resource)
     {
-    } 
+    }
 }

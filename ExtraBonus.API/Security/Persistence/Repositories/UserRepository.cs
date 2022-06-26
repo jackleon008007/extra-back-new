@@ -40,11 +40,10 @@ public class UserRepository : BaseRepository, IUserRepository
         return await _context.Users
             .FirstOrDefaultAsync(p => p.Email == email);
     }
-    
-    public async Task<User> FindBySpecialistAsync(string specialist)
+
+    public async Task<User> FindByEmailAndPasswordAsync(string email, string password)
     {
-        return await _context.Users
-            .FirstOrDefaultAsync(p => p.Specialist == specialist);
+        return await _context.Users.FirstOrDefaultAsync(p => p.Email == email && p.Password == password); 
     }
 
     public void Update(User user)
