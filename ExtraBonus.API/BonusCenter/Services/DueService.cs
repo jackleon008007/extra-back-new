@@ -83,6 +83,7 @@ public class DueService : IDueService
         existingDue.Prima = due.Prima;
         existingDue.EmisorEscudo = due.EmisorEscudo;
         existingDue.InflacionPeriodo = due.InflacionPeriodo;
+        //no estoy seguro si agregar el idcuota cuando se actualiza.
 
         try
         {
