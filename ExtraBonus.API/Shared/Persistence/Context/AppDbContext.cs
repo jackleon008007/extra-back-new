@@ -106,6 +106,7 @@ public class AppDbContext : DbContext
     builder.Entity<Due>().Property(p => p.Prima).IsRequired();
     builder.Entity<Due>().Property(p => p.EmisorEscudo).IsRequired();
     builder.Entity<Due>().Property(p => p.InflacionPeriodo).IsRequired();
+    builder.Entity<Due>().Property(p => p.CuotaId).IsRequired();
     builder.Entity<Due>().Property(p => p.BondId).IsRequired();
     
     ////////////////////////////////////////////////////////////////////
