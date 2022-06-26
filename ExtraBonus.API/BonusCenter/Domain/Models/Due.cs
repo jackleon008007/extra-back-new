@@ -3,7 +3,6 @@
 public class Due
 { 
     public int Id { get; set; } 
-    public int CuotaId { get; set; } 
     public int Numero { get; set; }  
     public double Emisor { get; set; }  
     public double Bonista { get; set; }  

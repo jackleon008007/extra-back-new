@@ -8,8 +8,7 @@ public class SaveDueResource
     public int Numero { get; set; }  
     [Required]
     public double Emisor { get; set; }
-    [Required]
-    public int CuotaId { get; set; } 
+ 
     [Required]
     public double Bonista { get; set; }  
     [Required]
