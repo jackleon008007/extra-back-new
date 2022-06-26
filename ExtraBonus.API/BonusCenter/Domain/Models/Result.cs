@@ -19,6 +19,10 @@ public class Result
     public double Total { get; set; } 
     public double DuracionModif { get; set; } 
     public double Precio { get; set; }
+    public double TCEAemisor { get; set; }
+    public double TCEAemisorEscudo { get; set; }
+    
+    public double TREAbonista { get; set; }
     public int BondId { get; set; } 
     public Bond Bond { get; set; } 
 }
