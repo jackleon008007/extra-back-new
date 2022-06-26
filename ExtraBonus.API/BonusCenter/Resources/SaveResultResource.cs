@@ -33,5 +33,7 @@ public class SaveResultResource
     [Required]
     public double DuracionModif { get; set; }
     [Required]
+    public double Precio { get; set; }
+    [Required]
     public int BondId { get; set; }
 }

@@ -18,7 +18,7 @@ public class Result
     public double Convexidad { get; set; } 
     public double Total { get; set; } 
     public double DuracionModif { get; set; } 
-    
+    public double Precio { get; set; }
     public int BondId { get; set; } 
     public Bond Bond { get; set; } 
 }

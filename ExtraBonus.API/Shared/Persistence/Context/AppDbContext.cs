@@ -126,6 +126,7 @@ public class AppDbContext : DbContext
     builder.Entity<Result>().Property(p => p.DuracionModif).IsRequired();
     builder.Entity<Result>().Property(p => p.EfectivaAnual).IsRequired();
     builder.Entity<Result>().Property(p => p.TotalPeriodo).IsRequired();
+    builder.Entity<Result>().Property(p => p.Precio).IsRequired();  
     builder.Entity<Result>().Property(p => p.BondId).IsRequired();
 
     builder.UseSnakeCaseNamingConvention();

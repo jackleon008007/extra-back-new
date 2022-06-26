@@ -83,6 +83,7 @@ public class ResultService :IResultService
         existingResult.DuracionModif = result.DuracionModif;
         existingResult.EfectivaAnual = result.EfectivaAnual;
         existingResult.TotalPeriodo = result.TotalPeriodo;
+        existingResult.Precio = result.Precio; 
 
         try
         {

@@ -19,6 +19,7 @@ public class ResultResource
     public double Convexidad { get; set; } 
     public double Total { get; set; } 
     public double DuracionModif { get; set; } 
+    public double Precio { get; set; }
     
     public BondResource Bond { get; set; } 
 }
