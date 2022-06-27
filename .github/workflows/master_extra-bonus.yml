@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'extra-bonus'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FCBEF5044E464CE4994257DC5B10BD68 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E1FDE5D417274711B7748019B7C811E6 }}
           package: .
